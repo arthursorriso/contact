@@ -2,7 +2,14 @@
 
 @section('content')
 <div class="my-3 p-3 bg-white rounded shadow-sm">
-<h3 class="border-bottom border-gray pb-2 mb-0"><strong>Contatos</strong></h3>
+    <h3 class="border-bottom border-gray pb-2 mb-0"><strong>Contatos</strong></h3>
+
+    @if (session('status'))
+    <div class="alert alert-success" role="alert">
+        {{ __(session('status')) }}
+    </div>
+    @endif
+
     @if(!$contacts->count())
         <div class="media text-muted pt-3">
             <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">

@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="my-3 p-3 bg-white rounded shadow-sm">
-    <h3 class="border-bottom border-gray pb-2 mb-0"><strong>Contatos - Adicionar</strong></h3>
+    <h3 class="border-bottom border-gray pb-2 mb-0"><strong>Contatos - Editando</strong></h3>
 
     <form action="{{url('contacts/'.$contact->id) }}" method="POST" enctype="multipart/form-data">
     <input type="hidden" name="_method" value="PATCH">

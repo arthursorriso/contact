@@ -45,7 +45,7 @@ class ContactsController extends Controller
         $input = $request->validate([
             'name' => 'required|max:255',
             'email' => 'required|email',
-            'tel' => 'required',
+            'tel' => 'required|min:14|max:15',
             'message' => 'required',
             'file' => 'required|mimes:pdf,doc,docx,odt,txt|max:500',
         ]);
@@ -59,7 +59,7 @@ class ContactsController extends Controller
 
         $contact = Contact::create($input);
         
-        //Mail::to(config('mail.mail_to_new_contact'))->send(new NewContact($contact));
+        Mail::to(config('mail.mail_to_new_contact'))->send(new NewContact($contact));
 
         return redirect('contacts')->with('status', 'Contato cadastrado com sucesso');
     }
