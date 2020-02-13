@@ -4,7 +4,7 @@
 Após o git clone, deverá executar os seguintes passos:
 
 - Acesse o diretório do porjeto
-- Execute 'composer install'
+- Execute `composer install`
 - Copie o arquivo .env.example para .env
 - Acesse o arquivo .env e adicione suas credenciais de banco de dados modificando:
   - DB_CONNECTION=mysql
@@ -24,11 +24,11 @@ Após o git clone, deverá executar os seguintes passos:
   - MAIL_FROM_NAME="${APP_NAME}"
 - Ainda no arquivo .env, foi criada uma nova variável que irá conter o e-mail padrão para receber as informações de cada contato adicionado. Altere-o para adicionar o e-mail desejado:
   - MAIL_TO_NEW_CONTACT=null
-- Saia do arquivo e no terminal execute o comando 'php artisan key:generate'
-- Por fim execute o comando 'php artisan migrate' para criar as tabelas no banco de dados
+- Saia do arquivo e no terminal execute o comando `php artisan key:generate`
+- Por fim execute o comando `php artisan migrate` para criar as tabelas no banco de dados
 
-Para acessar, caso não esteja em um servidor ou ambiente preparado, basta executar o comando 'php artisan serve' e acessar o endereço http://localhost:8000
+Para acessar, caso não esteja em um servidor ou ambiente preparado, basta executar o comando `php artisan serve` e acessar o endereço http://localhost:8000
 
 ## Testes
 
-Para executar os testes automatizados, no terminal, execute o comando 'vendor/bin/phpunit'
+Para executar os testes automatizados, no terminal, execute o comando `vendor/bin/phpunit`
